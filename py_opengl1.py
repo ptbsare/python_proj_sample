@@ -1,14 +1,18 @@
 from OpenGL.GL import *
 from OpenGL.GLU import *
-from OpenGL.glut import *
-def display
-  glclear(GL_COLOR_BUFFUER_BIT)
-	glutSolidSphere(0.5,20,20)
+from OpenGL.GLUT import *
+def display():
+	glClear(GL_COLOR_BUFFER_BIT)
+	glutWireTeapot(0.5)
 	glFlush()
-
+def idle():
+	glRotate(0.5,1.0,1.0,1.0)	
+	display()
 glutInit()
 glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB)
 glutInitWindowPosition(100,100)
 glutInitWindowSize(400,400)
+glutCreateWindow("py_opengl")
 glutDisplayFunc(display)
+glutIdleFunc(idle)
 glutMainLoop()
