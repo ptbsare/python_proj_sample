@@ -6,7 +6,7 @@ def display():
 	glutWireTeapot(0.5)
 	glFlush()
 def idle():
-	glRotate(0.5,1.0,1.0,1.0)	
+	glRotate(0.000,1.0,1.0,1.0)	
 	display()
 glutInit()
 glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB)
